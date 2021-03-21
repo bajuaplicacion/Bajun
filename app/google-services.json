@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "477841815463",
+    "project_id": "bajun-mobile",
+    "storage_bucket": "bajun-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477841815463:android:ec663bacdcee2ff02ee882",
+        "android_client_info": {
+          "package_name": "com.mx.bajun.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477841815463-h0mqh9urp7nvgcsd9jcum26ijrbug5k9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mx.bajun.mobile",
+            "certificate_hash": "3e9c6a62ce1ebbe86d03c5a37639b787d236b010"
+          }
+        },
+        {
+          "client_id": "477841815463-id5uhfup1bkomt58ie4tbakm9vik7hv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAEGJfyOoijcwaBLy_5oclGFn5z5pdeHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477841815463-id5uhfup1bkomt58ie4tbakm9vik7hv0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
