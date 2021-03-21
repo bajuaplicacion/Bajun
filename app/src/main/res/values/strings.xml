@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">Bajun</string>
+    <string name="action_settings">Settings</string>
+
+    //Log in menu
+    <string name="logo_content_description">Bajun, tu sistema ideal para tu negocio</string>
+    <string name="menu_diccionario">Diccionario</string>
+    <string name="menu_redesSociales">Redes Sociales</string>
+    <string name="menu_configuracion">Configuracion</string>
+    <string name="menu_ingresaConCorreoTxt">Ingresa con correo</string>
+
+    //Firebase Auth log in
+    <string name="fbAuth_correo">Correo:</string>
+    <string name="fbAuth_ingresa_tu_correo">Ingresa tu correo</string>
+    <string name="fbAuth_password">Contraseña:</string>
+    <string name="fbAuth_contrasena">Contraseña</string>
+    <string name="fbAuth_ingresar">Ingresar</string>
+    <string name="fbAuth_crear_cuenta"><u>Crear cuenta</u></string>
+
+    //Crea tu cuenta
+    <string name="cc_crea_tu_cuenta">Crea tu cuenta</string>
+    <string name="cc_nombre">Nombre:</string>
+    <string name="cc_apellido">Apellido:</string>
+    <string name="cc_correo">Correo:</string>
+    <string name="cc_contrasena">Contraseña:</string>
+    <string name="cc_verifica">Verifica:</string>
+    <string name="cc_ingresa_tu_nombre">Ingresa tu nombre</string>
+    <string name="cc_ingresa_tus_apellidos">Ingresa tus apellidos</string>
+    <string name="cc_ingresa_tu_correo">Ingresa tu correo</string>
+    <string name="cc_ingresa_tu_contrasena">Ingresa tu contraseña</string>
+    <string name="cc_verifica_contrasena">Ingresa de nuevo tu contraseña</string>
+
+    //Error
+    <string name="error_email_format">El correo no es correcto</string>
+    <string name="error_contrasenia_debil">Contraseña debil</string>
+    <string name="error_correo_existente">Correo ya existente</string>
+    <string name="error_contrasenia_incorrecta">Contraseña incorrecta</string>
 </resources>
