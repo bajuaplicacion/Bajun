@@ -163,4 +163,8 @@ open class BaseActivity : AppCompatActivity() {
             )
         }
     }
+
+    public fun isTablet() : Boolean {
+        return resources.getBoolean(R.bool.isTablet)
+    }
 }
