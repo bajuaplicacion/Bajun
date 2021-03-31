@@ -1,5 +1,6 @@
 package com.mx.bajun.mobile.login
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -51,7 +52,7 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
                     resetError(0)
                     createAccount(email, password, firstName, lastName)
                 } else {
-                    errorMessage("Datos incompletos", 0)
+                    errorMessage(getString(R.string.error_datos_incompletos), 0)
                 }
             }
         }
@@ -63,7 +64,7 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
                 if (!hasFocus) {
                     val correo: String = etCcCorreo.text.toString()
                     if (!TextUtils.isEmpty(correo) && !isValidEmail(correo)) {
-                        errorMessage("Correo incorrecto", R.id.et_cc_correo)
+                        errorMessage(getString(R.string.error_email_format), R.id.et_cc_correo)
                     } else {
                         resetError(R.id.et_cc_correo)
                     }
@@ -74,10 +75,10 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
                     val contrasena: String = etCcContrasena.text.toString()
                     val verifica: String = etCcVerifica.text.toString()
                     if ( TextUtils.isEmpty(contrasena) || TextUtils.isEmpty(verifica) ) {
-                        errorMessage("Contraseña incorrecta", R.id.et_cc_verifica)
+                        errorMessage(getString(R.string.error_contrasenia_incorrecta), R.id.et_cc_verifica)
                     } else {
                         if (contrasena != verifica) {
-                            errorMessage("Contraseña incorrecta", R.id.et_cc_verifica)
+                            errorMessage(getString(R.string.error_contrasenia_incorrecta), R.id.et_cc_verifica)
                         } else {
                             resetError(R.id.et_cc_verifica)
                         }
@@ -101,8 +102,10 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
         btnCreaCuenta.setOnClickListener(this)
     }
 
+    @SuppressLint("ResourceAsColor")
     private fun errorMessage(mensajeError : String, id : Int) {
         tvCcMensajeDeError.text = mensajeError
+        tvCcMensajeDeError.setTextColor(R.color.red)
         tvCcMensajeDeError.visibility = View.VISIBLE
         when (id) {
             R.id.et_cc_correo -> {
