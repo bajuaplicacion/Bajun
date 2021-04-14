@@ -1,18 +1,23 @@
 <resources>
+    <!--Separator and space -->
     <dimen name="logo_top_space">80dp</dimen>
+    <dimen name="top_separator">15dp</dimen>
+    <dimen name="medium_separator">12dp</dimen>
+    <dimen name="fb_auth_separator">20dp</dimen>
+    <dimen name="large_top_separator">40dp</dimen>
+    <dimen name="min_separator">5dp</dimen>
+
+    <!--Button -->
     <dimen name="google_sign_in_padding_button">10dp</dimen>
     <dimen name="google_sign_in_left_padding">50dp</dimen>
     <dimen name="button_padding_left_right">10dp</dimen>
     <dimen name="button_drawable_padding">10dp</dimen>
-    <dimen name="button_text_size">14sp</dimen>
-    <dimen name="top_separator">15dp</dimen>
-    <dimen name="medium_separator">12dp</dimen>
     <dimen name="button_left">20dp</dimen>
     <dimen name="button_right">20dp</dimen>
     <dimen name="button_top">10dp</dimen>
     <dimen name="button_bottom">10dp</dimen>
 
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="large_top_separator">40dp</dimen>
-    <dimen name="min_separator">5dp</dimen>
+    <!--Text-->
+    <dimen name="button_text_size">14sp</dimen>
+
 </resources>
