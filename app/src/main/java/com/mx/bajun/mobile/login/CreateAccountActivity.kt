@@ -102,10 +102,8 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
         btnCreaCuenta.setOnClickListener(this)
     }
 
-    @SuppressLint("ResourceAsColor")
     private fun errorMessage(mensajeError : String, id : Int) {
         tvCcMensajeDeError.text = mensajeError
-        tvCcMensajeDeError.setTextColor(R.color.red)
         tvCcMensajeDeError.visibility = View.VISIBLE
         when (id) {
             R.id.et_cc_correo -> {
