@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.core.view.setPadding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -27,6 +30,7 @@ import com.mx.bajun.mobile.utils.Constants.SIGN_IN_TYPE_KEY
 import com.mx.bajun.mobile.utils.Constants.USER_DISPLAY_NAME_KEY
 import com.mx.bajun.mobile.utils.Constants.USER_EMAIL_INTENT_KEY
 import com.mx.bajun.mobile.utils.Encrypt
+import org.w3c.dom.Text
 
 class LoginHomeScreenActivity : BaseActivity(), View.OnClickListener {
 
@@ -82,6 +86,22 @@ class LoginHomeScreenActivity : BaseActivity(), View.OnClickListener {
         val signInButton : SignInButton = findViewById(R.id.sign_in_button)
         signInButton.setSize(SignInButton.SIZE_WIDE)
         signInButton.setOnClickListener(this)
+
+        if (isTablet()) {
+            var index : Int = 0
+            while (index < signInButton.childCount) {
+                val view : View = signInButton.getChildAt(index)
+                if ( view is TextView) {
+                    view.textSize = resources.getDimension(R.dimen.button_text_size)
+                    view.setPadding(resources.getDimension(R.dimen.google_sign_in_left_padding).toInt()
+                            , resources.getDimension(R.dimen.google_sign_in_padding_button).toInt()
+                            , resources.getDimension(R.dimen.google_sign_in_padding_button).toInt()
+                            , resources.getDimension(R.dimen.google_sign_in_padding_button).toInt())
+                    break
+                }
+                index++
+            }
+        }
     }
 
     //Firebase authentication set

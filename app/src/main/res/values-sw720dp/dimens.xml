@@ -1,6 +1,7 @@
 <resources>
     <dimen name="logo_top_space">160dp</dimen>
     <dimen name="google_sign_in_padding_button">15dp</dimen>
+    <dimen name="google_sign_in_left_padding">50dp</dimen>
     <dimen name="button_padding_left_right">15dp</dimen>
     <dimen name="button_drawable_padding">15dp</dimen>
     <dimen name="button_text_size">18sp</dimen>
