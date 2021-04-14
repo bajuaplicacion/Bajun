@@ -6,13 +6,13 @@
     <dimen name="button_drawable_padding">15dp</dimen>
     <dimen name="button_text_size">18sp</dimen>
     <dimen name="top_separator">20dp</dimen>
+    <dimen name="medium_separator">20dp</dimen>
+    <dimen name="button_left">30dp</dimen>
+    <dimen name="button_right">30dp</dimen>
+    <dimen name="button_top">15dp</dimen>
+    <dimen name="button_bottom">15dp</dimen>
 
     <dimen name="large_top_separator">80dp</dimen>
     <dimen name="fab_margin">32dp</dimen>
-    <dimen name="button_left">40dp</dimen>
-    <dimen name="button_right">40dp</dimen>
-    <dimen name="button_top">20dp</dimen>
-    <dimen name="button_bottom">20dp</dimen>
     <dimen name="min_separator">10dp</dimen>
-    <dimen name="medium_separator">24dp</dimen>
 </resources>
