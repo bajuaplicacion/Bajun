@@ -11,7 +11,7 @@
       android:fillColor="@color/colorPrimary"/>
   <path
       android:pathData="M191.94,27.2m-21.02,0a21.02,21.02 0,1 1,42.04 0a21.02,21.02 0,1 1,-42.04 0"
-      android:fillColor="#3e5a83"/>
+      android:fillColor="@color/logo_pin"/>
   <path
       android:pathData="M0.016,119.125l378.359,-51.291l24.424,180.172l-378.359,51.291z"
       android:fillColor="@color/colorPrimary"/>
