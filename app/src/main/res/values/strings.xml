@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Bajun</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name" translatable="false">Bajun</string>
+    <string name="action_settings">Configuracion</string>
 
     //Log in menu
     <string name="logo_content_description">Bajun, tu sistema ideal para tu negocio</string>
