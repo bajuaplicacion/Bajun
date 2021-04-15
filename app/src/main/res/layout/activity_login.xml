@@ -39,7 +39,7 @@
         android:paddingEnd="@dimen/button_padding_left_right"
         android:contentDescription="@string/menu_ingresaConCorreoTxt"
         android:drawableStart="@drawable/ic_mail"
-        android:drawablePadding="10dp"
+        android:drawablePadding="@dimen/button_drawable_padding"
         style="@style/ButtonStyle"
         app:layout_constraintTop_toBottomOf="@id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"

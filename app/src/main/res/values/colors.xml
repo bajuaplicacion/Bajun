@@ -10,6 +10,7 @@
     <color name="windowBackground">#027ADA</color>
     <color name="textButton">#027ADA</color>
     <color name="blueIconColor">#027ADA</color>
+    <color name="animated_hint_color">#ffffff</color>
     <color name="backgroundButton">#ffffff</color>
     <color name="white">#ffffff</color>
     <color name="hint_gray">#979797</color>

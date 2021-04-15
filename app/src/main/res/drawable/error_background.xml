@@ -6,4 +6,9 @@
     <stroke
         android:color="@color/red"
         android:width="2dp"/>
+    <corners
+        android:bottomLeftRadius="@dimen/edit_text_round_corner"
+        android:bottomRightRadius="@dimen/edit_text_round_corner"
+        android:topLeftRadius="@dimen/edit_text_round_corner"
+        android:topRightRadius="@dimen/edit_text_round_corner"/>
 </shape>

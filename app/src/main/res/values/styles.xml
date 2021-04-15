@@ -27,7 +27,6 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/poppins</item>
-        <item name="android:textStyle">italic</item>
     </style>
 
     <style name="ErrorTextStyle">
@@ -35,7 +34,6 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/red</item>
         <item name="fontFamily">@font/poppins</item>
-        <item name="android:textStyle">italic</item>
 
     </style>
 

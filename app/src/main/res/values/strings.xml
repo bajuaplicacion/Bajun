@@ -1,21 +1,20 @@
 <resources>
     <string name="app_name" translatable="false">Bajun</string>
     <string name="action_settings">Configuracion</string>
+    <string name="logo_content_description">Bajun, tu sistema ideal para tu negocio</string>
 
     //Log in menu
-    <string name="logo_content_description">Bajun, tu sistema ideal para tu negocio</string>
     <string name="menu_diccionario">Diccionario</string>
     <string name="menu_redesSociales">Redes Sociales</string>
     <string name="menu_configuracion">Configuracion</string>
     <string name="menu_ingresaConCorreoTxt">Ingresa con correo</string>
 
     //Firebase Auth log in
-    <string name="fbAuth_correo">Correo:</string>
-    <string name="fbAuth_ingresa_tu_correo">Ingresa tu correo</string>
-    <string name="fbAuth_password">Contraseña:</string>
-    <string name="fbAuth_contrasena">Contraseña</string>
+    <string name="fbAuth_correo">Correo</string>
+    <string name="fbAuth_password">Contraseña</string>
     <string name="fbAuth_ingresar">Ingresar</string>
     <string name="fbAuth_crear_cuenta"><u>Crear cuenta</u></string>
+    <string name="fbAuth_forgot_password"><u>Olvidaste tu contraseña?</u></string>
 
     //Crea tu cuenta
     <string name="cc_crea_tu_cuenta">Crea tu cuenta</string>

@@ -20,4 +20,7 @@
     <!--Text-->
     <dimen name="button_text_size">14sp</dimen>
 
+    <!--Edit Text-->
+    <dimen name="edit_text_round_corner">15dp</dimen>
+
 </resources>
