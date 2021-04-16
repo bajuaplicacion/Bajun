@@ -5,6 +5,7 @@
     <dimen name="medium_separator">12dp</dimen>
     <dimen name="fb_auth_separator">20dp</dimen>
     <dimen name="large_top_separator">40dp</dimen>
+    <dimen name="cc_top_separator">20dp</dimen>
     <dimen name="min_separator">5dp</dimen>
 
     <!--Button -->

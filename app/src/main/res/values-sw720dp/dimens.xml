@@ -4,7 +4,8 @@
     <dimen name="top_separator">20dp</dimen>
     <dimen name="medium_separator">20dp</dimen>
     <dimen name="fb_auth_separator">30dp</dimen>
-    <dimen name="large_top_separator">80dp</dimen>
+    <dimen name="large_top_separator">60dp</dimen>
+    <dimen name="cc_top_separator">30dp</dimen>
     <dimen name="min_separator">10dp</dimen>
     <!--Button -->
     <dimen name="google_sign_in_padding_button">15dp</dimen>
