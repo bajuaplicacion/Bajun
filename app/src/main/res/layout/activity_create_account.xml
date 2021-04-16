@@ -64,21 +64,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_creaTuCuenta">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cc_correo"
-                    style="@style/NormalTextStyle"/>
 
-                <EditText
-                    android:id="@+id/et_cc_correo"
-                    android:layout_width="fill_parent"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tIL_cc_email"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="46dp"
-                    android:hint="@string/cc_ingresa_tu_correo"
-                    android:inputType="text"
-                    android:importantForAutofill="no"
-                    style="@style/EditTextNormal"/>
+                    app:hintTextColor="@color/animated_hint_color"
+                    android:layout_marginStart="@dimen/medium_separator"
+                    android:layout_marginEnd="@dimen/medium_separator">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_cc_correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart ="@drawable/ic_mail"
+                        android:drawablePadding="@dimen/editText_drawable_padding"
+                        android:hint="@string/cc_correo"
+                        android:inputType="textEmailAddress"
+                        style="@style/EditTextNormal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -92,21 +97,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_cc_correo">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cc_contrasena"
-                    style="@style/NormalTextStyle"/>
 
-                <EditText
-                    android:id="@+id/et_cc_contrasena"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="11dp"
-                    android:hint="@string/cc_ingresa_tu_contrasena"
-                    android:importantForAutofill="no"
-                    android:inputType="textPassword"
-                    style="@style/EditTextNormal"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tIL_cc_password"
+                    android:layout_marginStart="@dimen/medium_separator"
+                    android:layout_marginEnd="@dimen/medium_separator"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleDrawable="@drawable/password_toggle"
+                    app:passwordToggleTint="@color/blueIconColor"
+                    app:hintTextColor="@color/animated_hint_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_cc_contrasena"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPassword"
+                        android:drawableStart="@drawable/ic_password"
+                        android:drawablePadding="@dimen/editText_drawable_padding"
+                        android:hint="@string/cc_contrasena"
+                        style="@style/EditTextNormal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -120,21 +133,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_cc_contrasena">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cc_verifica"
-                    style="@style/NormalTextStyle"/>
 
-                <EditText
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tIL_cc_verifica"
+                    android:layout_marginStart="@dimen/medium_separator"
+                    android:layout_marginEnd="@dimen/medium_separator"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleDrawable="@drawable/password_toggle"
+                    app:passwordToggleTint="@color/blueIconColor"
+                    app:hintTextColor="@color/animated_hint_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_cc_verifica"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/large_top_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:inputType="textPassword"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="@dimen/editText_drawable_padding"
                     android:hint="@string/cc_verifica_contrasena"
-                    android:importantForAutofill="no"
                     style="@style/EditTextNormal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -148,21 +169,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_cc_verifica">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cc_nombre"
-                    style="@style/NormalTextStyle"/>
 
-                <EditText
-                    android:id="@+id/et_cc_nombre"
-                    android:layout_width="fill_parent"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tIL_cc_nombre"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/large_top_separator"
-                    android:hint="@string/cc_ingresa_tu_nombre"
-                    android:inputType="text"
-                    style="@style/EditTextNormal"
-                    android:importantForAutofill="no"/>
+                    app:hintTextColor="@color/animated_hint_color"
+                    android:layout_marginStart="@dimen/medium_separator"
+                    android:layout_marginEnd="@dimen/medium_separator">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_cc_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart ="@drawable/ic_person"
+                        android:drawablePadding="@dimen/editText_drawable_padding"
+                        android:hint="@string/cc_nombre"
+                        android:inputType="text"
+                        style="@style/EditTextNormal"/>
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -176,21 +201,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_cc_nombre">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cc_apellido"
-                    style="@style/NormalTextStyle"/>
 
-                <EditText
-                    android:id="@+id/et_cc_apellido"
-                    android:layout_width="fill_parent"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tIL_cc_apellido"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="39dp"
-                    android:hint="@string/cc_ingresa_tus_apellidos"
-                    android:inputType="text"
-                    android:importantForAutofill="no"
-                    style="@style/EditTextNormal"/>
+                    app:hintTextColor="@color/animated_hint_color"
+                    android:layout_marginStart="@dimen/medium_separator"
+                    android:layout_marginEnd="@dimen/medium_separator">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_cc_apellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart ="@drawable/ic_person"
+                        android:drawablePadding="@dimen/editText_drawable_padding"
+                        android:hint="@string/cc_apellido"
+                        android:inputType="text"
+                        style="@style/EditTextNormal"/>
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <Button

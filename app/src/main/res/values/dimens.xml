@@ -22,5 +22,6 @@
 
     <!--Edit Text-->
     <dimen name="edit_text_round_corner">15dp</dimen>
+    <dimen name="editText_drawable_padding">10dp</dimen>
 
 </resources>

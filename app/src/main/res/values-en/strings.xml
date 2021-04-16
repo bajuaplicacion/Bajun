@@ -19,15 +19,10 @@
 
     //Crea tu cuenta
     <string name="cc_crea_tu_cuenta">Create your account</string>
-    <string name="cc_nombre">First Name:</string>
-    <string name="cc_apellido">"Last Name: "</string>
-    <string name="cc_correo">E-mail:</string>
-    <string name="cc_contrasena">Password:</string>
-    <string name="cc_verifica">Validate:</string>
-    <string name="cc_ingresa_tu_nombre">Your first name</string>
-    <string name="cc_ingresa_tus_apellidos">Your last name</string>
-    <string name="cc_ingresa_tu_correo">Your e-mail</string>
-    <string name="cc_ingresa_tu_contrasena">Your password</string>
+    <string name="cc_nombre">First Name</string>
+    <string name="cc_apellido">Last Name: </string>
+    <string name="cc_correo">E-mail</string>
+    <string name="cc_contrasena">Password</string>
     <string name="cc_verifica_contrasena">Put your password again</string>
     <string name="cc_req_contrasena">The password should have at least:\\n6 to 15 characters.\\nUpper case, lower case, numbers.\\nSpecial characters (-!@#$%&amp;*ˆ+=_)</string>
 

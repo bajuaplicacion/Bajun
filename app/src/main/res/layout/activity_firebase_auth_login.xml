@@ -53,6 +53,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tIL_email"
                     android:layout_marginStart="@dimen/medium_separator"
+                    android:layout_marginEnd="@dimen/medium_separator"
                     app:hintTextColor="@color/animated_hint_color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -62,7 +63,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawableStart="@drawable/ic_mail"
-                        android:drawablePadding="@dimen/button_drawable_padding"
+                        android:drawablePadding="@dimen/editText_drawable_padding"
                         android:hint="@string/fbAuth_correo"
                         android:inputType="textEmailAddress"
                         style="@style/EditTextNormal"/>
@@ -82,6 +83,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tIL_password"
                     android:layout_marginStart="@dimen/medium_separator"
+                    android:layout_marginEnd="@dimen/medium_separator"
                     app:passwordToggleEnabled="true"
                     app:passwordToggleDrawable="@drawable/password_toggle"
                     app:passwordToggleTint="@color/blueIconColor"
@@ -94,9 +96,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="textPassword"
-                        android:paddingTop="0dp"
                         android:drawableStart="@drawable/ic_password"
-                        android:drawablePadding="@dimen/button_drawable_padding"
+                        android:drawablePadding="@dimen/editText_drawable_padding"
                         android:hint="@string/fbAuth_password"
                         style="@style/EditTextNormal"/>
 
