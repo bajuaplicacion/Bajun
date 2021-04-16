@@ -44,7 +44,7 @@
                 android:id="@+id/ll_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginTop="@dimen/medium_separator"
                 android:layout_marginStart="@dimen/top_separator"
                 android:layout_marginEnd="@dimen/top_separator"
