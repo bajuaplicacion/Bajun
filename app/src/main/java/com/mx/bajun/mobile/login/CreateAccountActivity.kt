@@ -190,16 +190,8 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
 
 
     private fun showPasswordDialog() {
-        val builder : AlertDialog.Builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
-        builder.setIcon(R.drawable.ic_baju_app)
-        builder.setTitle(R.string.cc_rec_title)
-        builder.setMessage(R.string.cc_req_contrasena)
-        builder.setCancelable(false)
-        builder.setNegativeButton(R.string.ok, DialogInterface.OnClickListener{
-                dialog, _ ->  dialog.dismiss()
-        })
-        builder.create().show()
-
+        createDialog(false, getString(R.string.cc_rec_title), getString(R.string.cc_req_contrasena),
+            getString(R.string.ok), DialogInterface.OnClickListener{ dialog, _ ->  dialog.dismiss() })
     }
 
     companion object {
