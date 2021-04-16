@@ -7,6 +7,7 @@
     <dimen name="large_top_separator">60dp</dimen>
     <dimen name="cc_top_separator">30dp</dimen>
     <dimen name="min_separator">10dp</dimen>
+
     <!--Button -->
     <dimen name="google_sign_in_padding_button">15dp</dimen>
     <dimen name="google_sign_in_left_padding">50dp</dimen>
@@ -16,10 +17,22 @@
     <dimen name="button_right">30dp</dimen>
     <dimen name="button_top">15dp</dimen>
     <dimen name="button_bottom">15dp</dimen>
+
     <!--Text-->
     <dimen name="button_text_size">18sp</dimen>
+    <dimen name="dialog_title_size">34sp</dimen>
+    <dimen name="dialog_subTitle_size">20sp</dimen>
+
     <!--Edit Text-->
     <dimen name="edit_text_round_corner">22dp</dimen>
     <dimen name="editText_drawable_padding">15dp</dimen>
+
+    <!--Dialog-->
+    <dimen name="dialog_width">525</dimen>
+    <dimen name="dialog_height">375dp</dimen>
+    <dimen name="dialog_drawable_padding">30dp</dimen>
+    <dimen name="dialog_title_padding">22dp</dimen>
+    <dimen name="dialog_subTitle_padding">30dp</dimen>
+    <dimen name="dialog_button_separator">8dp</dimen>
 
 </resources>

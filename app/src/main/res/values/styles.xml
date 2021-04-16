@@ -8,6 +8,7 @@
         <item name="android:navigationBarColor">@color/navigatonBarColor</item>
         <item name="android:windowBackground">@color/windowBackground</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:windowAnimationStyle">@style/animation</item>
     </style>
 
     <style name="MyDarkToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
@@ -37,6 +38,14 @@
 
     </style>
 
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/windowBackground</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:titleTextColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
     <style name="EditTextNormal" parent="@style/Widget.AppCompat.EditText">
         <item name="android:paddingTop">3dp</item>
         <item name="android:paddingBottom">3dp</item>
@@ -51,6 +60,16 @@
 
     <style name="ErrorEditText" parent="EditTextNormal">
         <item name="android:background">@drawable/error_background</item>
+    </style>
+
+    <style name="dialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="animation" parent="dialogAnimation">
+        <item name="android:windowEnterTransition">@android:anim/fade_in</item>
+        <item name="android:windowExitTransition">@android:anim/fade_out</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

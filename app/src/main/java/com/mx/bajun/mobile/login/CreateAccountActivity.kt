@@ -1,6 +1,9 @@
 package com.mx.bajun.mobile.login
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -39,6 +42,7 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
         init()
+        showPasswordDialog()
     }
 
     override fun onClick(p0: View?) {
@@ -182,6 +186,20 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
                     Log.d(TAG, "updateDisplayName: failuer")
                 }
             })
+    }
+
+
+    private fun showPasswordDialog() {
+        val builder : AlertDialog.Builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
+        builder.setIcon(R.drawable.ic_baju_app)
+        builder.setTitle(R.string.cc_rec_title)
+        builder.setMessage(R.string.cc_req_contrasena)
+        builder.setCancelable(false)
+        builder.setNegativeButton(R.string.ok, DialogInterface.OnClickListener{
+                dialog, _ ->  dialog.dismiss()
+        })
+        builder.create().show()
+
     }
 
     companion object {

@@ -1,11 +1,15 @@
 package com.mx.bajun.mobile.base
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.DialogCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -167,4 +171,5 @@ open class BaseActivity : AppCompatActivity() {
     public fun isTablet() : Boolean {
         return resources.getBoolean(R.bool.isTablet)
     }
+
 }

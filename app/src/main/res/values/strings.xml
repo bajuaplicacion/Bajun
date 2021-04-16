@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">Bajun</string>
     <string name="action_settings">Configuracion</string>
     <string name="logo_content_description">Bajun, tu sistema ideal para tu negocio</string>
+    <string name="ok">Ok</string>
 
     //Log in menu
     <string name="menu_diccionario">Diccionario</string>
@@ -23,7 +24,8 @@
     <string name="cc_correo">Correo</string>
     <string name="cc_contrasena">Contraseña</string>
     <string name="cc_verifica_contrasena">Ingresa de nuevo tu contraseña</string>
-    <string name="cc_req_contrasena">La contraseña debe de contar con al menos:\nMínimo 6 y máximo 15 caracteres.\nMayúsculas, minúsculas, números.\n Caracteres especiales (-!@#$%&amp;*ˆ+=_)</string>
+    <string name="cc_rec_title">Requisitos para la contraseña</string>
+    <string name="cc_req_contrasena"><html><body><p>La contraseña debe de contar con al menos:</p><p>Mínimo 6 y máximo 15 caracteres.</p><p> Mayúsculas, minúsculas, números.</p><p> Caracteres especiales (-!@#$%&amp;*ˆ+=_)</p></body></html></string>
 
     //Error
     <string name="error_email_format">El correo no es correcto</string>

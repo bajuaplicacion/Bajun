@@ -16,6 +16,7 @@
     <string name="fbAuth_ingresar">Log in</string>
     <string name="fbAuth_crear_cuenta"><u>Create your account</u></string>
     <string name="fbAuth_forgot_password"><u>Forgot your password?</u></string>
+    <string name="ok">Ok</string>
 
     //Crea tu cuenta
     <string name="cc_crea_tu_cuenta">Create your account</string>
@@ -24,7 +25,8 @@
     <string name="cc_correo">E-mail</string>
     <string name="cc_contrasena">Password</string>
     <string name="cc_verifica_contrasena">Put your password again</string>
-    <string name="cc_req_contrasena">The password should have at least:\\n6 to 15 characters.\\nUpper case, lower case, numbers.\\nSpecial characters (-!@#$%&amp;*ˆ+=_)</string>
+    <string name="cc_rec_title">Password requirements</string>
+    <string name="cc_req_contrasena"><html><body><p>The password should have at least:</p><p>6 to 15 characters.</p><p>Upper case, lower case, numbers.</p><p>Special characters (-!@#$%&amp;amp;*ˆ+=_)</p></body></html></string>
 
     //Error
     <string name="error_email_format">The e-mail is incorrect</string>
