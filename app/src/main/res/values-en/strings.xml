@@ -16,7 +16,7 @@
     <string name="fbAuth_ingresar">Log in</string>
     <string name="fbAuth_crear_cuenta"><u>Create your account</u></string>
     <string name="fbAuth_forgot_password"><u>Forgot your password?</u></string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
 
     //Crea tu cuenta
     <string name="cc_crea_tu_cuenta">Create your account</string>

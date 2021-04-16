@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">Bajun</string>
     <string name="action_settings">Configuracion</string>
     <string name="logo_content_description">Bajun, tu sistema ideal para tu negocio</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
 
     //Log in menu
     <string name="menu_diccionario">Diccionario</string>
