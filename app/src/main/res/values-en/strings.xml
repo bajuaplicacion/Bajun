@@ -26,7 +26,8 @@
     <string name="cc_contrasena">Password</string>
     <string name="cc_verifica_contrasena">Put your password again</string>
     <string name="cc_rec_title">Password requirements</string>
-    <string name="cc_req_contrasena"><html><body><p>The password should have at least:</p><p>6 to 15 characters.</p><p>Upper case, lower case, numbers.</p><p>Special characters (-!@#$%&amp;amp;*ˆ+=_)</p></body></html></string>
+    <string name="cc_password_information_cd">Password requirements</string>
+    <string name="cc_req_contrasena">The password should have at least:\n   6 to 15 characters.\n   Upper case, lower case, numbers.\n   Special characters (-!@#$%&amp;*ˆ+=_)</string>
 
     //Error
     <string name="error_email_format">The e-mail is incorrect</string>

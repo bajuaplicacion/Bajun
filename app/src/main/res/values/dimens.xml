@@ -7,6 +7,8 @@
     <dimen name="large_top_separator">40dp</dimen>
     <dimen name="cc_top_separator">20dp</dimen>
     <dimen name="min_separator">5dp</dimen>
+    <dimen name="cc_right_margin_separator">12dp</dimen>
+    <dimen name="cc_top_margin_separator">2dp</dimen>
 
     <!--Button -->
     <dimen name="google_sign_in_padding_button">10dp</dimen>

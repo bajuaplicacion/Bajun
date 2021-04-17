@@ -11,6 +11,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -35,6 +36,7 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
     private lateinit var etCcVerifica : EditText
     private lateinit var btnCreaCuenta : Button
     private lateinit var auth: FirebaseAuth
+    private lateinit var passwordInfo : ImageView
     private var esCorreoCorrecto : Boolean = false
     private var esContrasenaCorrecta : Boolean = false
 
@@ -59,6 +61,7 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
                     errorMessage(getString(R.string.error_datos_incompletos), 0)
                 }
             }
+            R.id.iv_password_information -> showPasswordDialog()
         }
     }
 
@@ -101,9 +104,11 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
         etCcContrasena = findViewById(R.id.et_cc_contrasena)
         etCcVerifica = findViewById(R.id.et_cc_verifica)
         btnCreaCuenta = findViewById(R.id.btn_crea_cuenta)
+        passwordInfo = findViewById(R.id.iv_password_information)
         etCcCorreo.onFocusChangeListener = this
         etCcVerifica.onFocusChangeListener = this
         btnCreaCuenta.setOnClickListener(this)
+        passwordInfo.setOnClickListener(this)
     }
 
     private fun errorMessage(mensajeError : String, id : Int) {
