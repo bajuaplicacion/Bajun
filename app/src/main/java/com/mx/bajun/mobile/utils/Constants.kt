@@ -13,6 +13,7 @@ object Constants {
     const val USER_EMAIL_INTENT_KEY : String = "userEmailTag"
     const val SIGN_IN_TYPE_KEY : String = "signInTypeKey"
     const val EMAIL_KEY : String = "emailKey"
+    const val DISPLAY_LANGUAGE_KEY = "displayLanguageKey"
 
     //Default values
     const val EMPTY_STRING : String = ""

@@ -29,8 +29,14 @@
     <string name="cc_password_information_cd">Password requirements</string>
     <string name="cc_req_contrasena">The password should have at least:\n   6 to 15 characters.\n   Upper case, lower case, numbers.\n   Special characters (-!@#$%&amp;*ˆ+=_)</string>
 
+    //Password reset
+    <string name="pr_title">Password reset</string>
+    <string name="pr_email_hint">E-mail</string>
+    <string name="pr_send">Send</string>
+
     //Error
     <string name="error_email_format">The e-mail is incorrect</string>
+    <string name="error_email_no_register">The email is not registered</string>
     <string name="error_contrasenia_debil">Weak password</string>
     <string name="error_correo_existente">The e-mail already exist</string>
     <string name="error_contrasenia_incorrecta">Wrong password</string>

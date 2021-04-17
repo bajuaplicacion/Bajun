@@ -19,6 +19,7 @@ import com.mx.bajun.mobile.utils.BajunSharedPreferences
 import com.mx.bajun.mobile.utils.Common.Companion.isValidEmail
 import com.mx.bajun.mobile.utils.Constants
 import com.mx.bajun.mobile.utils.Constants.CREATE_ACCOUNT_RESULT_ID
+import com.mx.bajun.mobile.utils.Constants.DISPLAY_LANGUAGE_KEY
 import com.mx.bajun.mobile.utils.Constants.SUCCESS_ID
 
 class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnFocusChangeListener {
@@ -28,6 +29,7 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
     private lateinit var btnIngresar : Button
     private lateinit var tvCrearCuenta : TextView
     private lateinit var tvErrorMessage : TextView
+    private lateinit var tvForgotPassword : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,7 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
         when (p0?.id) {
             R.id.btn_ingresar -> login()
             R.id.tv_crearCuenta -> goToCreaCuenta()
+            R.id.tv_forgotPassword -> showPasswordResetPopUp()
         }
     }
 
@@ -69,10 +72,12 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
         btnIngresar  = findViewById(R.id.btn_ingresar)
         tvCrearCuenta = findViewById(R.id.tv_crearCuenta)
         tvErrorMessage = findViewById(R.id.tv_errorMessage)
+        tvForgotPassword = findViewById(R.id.tv_forgotPassword)
         etCorreo.onFocusChangeListener = this
         btnIngresar.setOnClickListener(this)
         btnIngresar.isEnabled = false
         tvCrearCuenta.setOnClickListener(this)
+        tvForgotPassword.setOnClickListener(this)
     }
 
     private fun checkEmailFormat() {
@@ -137,6 +142,12 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
                 }
             }
 
+    }
+
+    private fun showPasswordResetPopUp() {
+        val passwordResetIntent : Intent = Intent(this, PasswordResetPopUpActivity::class.java)
+        passwordResetIntent.putExtra(DISPLAY_LANGUAGE_KEY, getDisplayLanguage())
+        startActivity(passwordResetIntent)
     }
 
     companion object {

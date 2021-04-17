@@ -37,4 +37,8 @@
     <dimen name="dialog_subTitle_padding">30dp</dimen>
     <dimen name="dialog_button_separator">8dp</dimen>
 
+    <!-- Pop up -->
+    <dimen name="popUpLogoWidthHeight">150dp</dimen>
+    <!-- Image -->
+
 </resources>

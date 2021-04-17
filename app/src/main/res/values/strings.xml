@@ -28,8 +28,14 @@
     <string name="cc_password_information_cd">Requisitos para la contraseña</string>
     <string name="cc_req_contrasena">La contraseña debe de contar con al menos:\n  Mínimo 6 y máximo 15 caracteres.\n   Mayúsculas, minúsculas, números.\n  Caracteres especiales (-!@#$%&amp;*ˆ+=_)</string>
 
+    //Password reset
+    <string name="pr_title">Resetea tu contraseña</string>
+    <string name="pr_email_hint">Correo</string>
+    <string name="pr_send">Enviar</string>
+
     //Error
     <string name="error_email_format">El correo no es correcto</string>
+    <string name="error_email_no_register">El correo no esta registrado</string>
     <string name="error_contrasenia_debil">Contraseña debil</string>
     <string name="error_correo_existente">Correo ya existente</string>
     <string name="error_contrasenia_incorrecta">Contraseña incorrecta</string>

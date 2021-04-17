@@ -191,6 +191,13 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
                     Log.d(TAG, "updateDisplayName: failuer")
                 }
             })
+
+        auth.languageCode = getDisplayLanguage()
+        user?.sendEmailVerification()?.addOnCompleteListener { it ->
+            if (it.isSuccessful) {
+                Log.d(TAG, "updateDisplayName: Verification email sent")
+            }
+        }
     }
 
 

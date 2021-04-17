@@ -20,6 +20,7 @@ import com.mx.bajun.mobile.R
 import com.mx.bajun.mobile.utils.BajunSharedPreferences
 import com.mx.bajun.mobile.utils.Common.Companion.isDebugMode
 import com.mx.bajun.mobile.utils.Constants
+import java.util.*
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -190,6 +191,10 @@ open class BaseActivity : AppCompatActivity() {
 
     public fun createDialog(cancelable: Boolean, title: String, message: String, negativeText:String, negativeOnClickListener : DialogInterface.OnClickListener) {
         createDialog(cancelable, title, message, negativeText, negativeOnClickListener, null, null)
+    }
+
+    fun getDisplayLanguage() : String {
+        return Locale.getDefault().language
     }
 
 }

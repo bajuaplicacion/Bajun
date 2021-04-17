@@ -112,8 +112,7 @@
                     android:layout_marginEnd="@dimen/top_separator"
                     android:layout_gravity="end"
                     style="@style/NormalTextStyle"
-                    android:text="@string/fbAuth_forgot_password"
-                    />
+                    android:text="@string/fbAuth_forgot_password" />
 
             </LinearLayout>
 
