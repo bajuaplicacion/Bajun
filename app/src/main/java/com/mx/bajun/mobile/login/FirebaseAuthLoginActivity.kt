@@ -66,7 +66,7 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
     }
 
     private fun init() {
-        setUpToolbar(true, false)
+        setUpToolbar(true)
         etCorreo = findViewById(R.id.et_correo)
         etPassword = findViewById(R.id.et_password)
         btnIngresar  = findViewById(R.id.btn_ingresar)

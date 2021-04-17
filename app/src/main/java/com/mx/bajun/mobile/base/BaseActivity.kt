@@ -1,17 +1,13 @@
 package com.mx.bajun.mobile.base
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import android.widget.FrameLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
-import androidx.core.app.DialogCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -21,30 +17,19 @@ import com.mx.bajun.mobile.utils.BajunSharedPreferences
 import com.mx.bajun.mobile.utils.Common.Companion.isDebugMode
 import com.mx.bajun.mobile.utils.Constants
 import java.util.*
+import kotlin.properties.Delegates
 
 open class BaseActivity : AppCompatActivity() {
 
+    private lateinit var toolbar: Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         super.setContentView(R.layout.activity_base)
-        setUpToolbar()
+        setUI()
         secureScreen()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        //inflateMenu(menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> backPressButton()
-            R.id.menu_diccionario -> goToDiccionario()
-            R.id.menu_redesSociales -> goToRedesSociales()
-            R.id.menu_configuracion -> goToConfiguracion()
-        }
-        return true
-    }
 
     override fun onBackPressed() {
         Toast.makeText(this, "Back press", Toast.LENGTH_SHORT).show()
@@ -78,19 +63,14 @@ open class BaseActivity : AppCompatActivity() {
         activityContainer.addView(stubView, params)
     }
 
-    private fun setUpToolbar() {
-        val toolbar: Toolbar = findViewById(R.id.base_toolbar)
+    private fun setUI() {
+       toolbar = findViewById(R.id.base_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_back_arrow_white)
     }
 
-    private fun inflateMenu(menu: Menu?) {
-        menuInflater.inflate(R.menu.main_menu, menu)
-    }
-
-    public fun setUpToolbar(bShowBackNavigationButton: Boolean, bShowMenu: Boolean) {
+    public fun setUpToolbar(bShowBackNavigationButton: Boolean) {
         showBackNavigationButton(bShowBackNavigationButton)
-        showMenu(bShowMenu)
     }
 
     private fun showBackNavigationButton(show: Boolean) {
@@ -106,27 +86,6 @@ open class BaseActivity : AppCompatActivity() {
     public fun changeSubTitle(subtTitle: String) {
         val toolbar: Toolbar = findViewById(R.id.base_toolbar)
         toolbar.subtitle = subtTitle
-    }
-
-    private fun showMenu(show: Boolean) {
-        val toolbar: Toolbar = findViewById(R.id.base_toolbar)
-        if (show) {
-            inflateMenu(toolbar.menu)
-        } else {
-            toolbar.menu.clear()
-        }
-    }
-
-    public fun goToDiccionario() {
-        Toast.makeText(this, "Diccionario", Toast.LENGTH_SHORT).show()
-    }
-
-    public fun goToRedesSociales() {
-        Toast.makeText(this, "Redes sociales", Toast.LENGTH_SHORT).show()
-    }
-
-    public fun goToConfiguracion() {
-        Toast.makeText(this, "Configuracion", Toast.LENGTH_SHORT).show()
     }
 
     public fun backPressButton() {

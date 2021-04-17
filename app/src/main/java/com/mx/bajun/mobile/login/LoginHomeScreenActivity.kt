@@ -37,7 +37,7 @@ class LoginHomeScreenActivity : BaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        setUpToolbar(false, false)
+        setUpToolbar(false)
         setGoogleSignIn()
         setFirebaseAuthentication()
     }
