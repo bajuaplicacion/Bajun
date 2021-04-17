@@ -20,6 +20,7 @@
                 android:id="@+id/ll_logo_fb_auth_createAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:layout_marginTop="@dimen/large_top_separator"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
