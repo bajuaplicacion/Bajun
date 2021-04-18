@@ -4,20 +4,23 @@
     <string name="logo_content_description">Bajun, tu sistema ideal para tu negocio</string>
     <string name="ok">OK</string>
 
-    //Log in menu
+    <!-- menu -->
     <string name="menu_diccionario">Diccionario</string>
     <string name="menu_redesSociales">Redes Sociales</string>
     <string name="menu_configuracion">Configuracion</string>
-    <string name="menu_ingresaConCorreoTxt">Ingresa con correo</string>
+    <string name="menu_exit">Salir</string>
 
-    //Firebase Auth log in
+    <!-- Log in -->
+    <string name="li_ingresaConCorreoTxt">Ingresa con correo</string>
+
+    <!-- Firebase Auth log in -->
     <string name="fbAuth_correo">Correo</string>
     <string name="fbAuth_password">Contraseña</string>
     <string name="fbAuth_ingresar">Ingresar</string>
     <string name="fbAuth_crear_cuenta"><u>Crear cuenta</u></string>
     <string name="fbAuth_forgot_password"><u>Olvidaste tu contraseña?</u></string>
 
-    //Crea tu cuenta
+    <!-- Crea tu cuenta -->
     <string name="cc_crea_tu_cuenta">Crea tu cuenta</string>
     <string name="cc_nombre">Nombre(s)</string>
     <string name="cc_apellido">Apellido(s)</string>
@@ -28,12 +31,12 @@
     <string name="cc_password_information_cd">Requisitos para la contraseña</string>
     <string name="cc_req_contrasena">La contraseña debe de contar con al menos:\n  Mínimo 6 y máximo 15 caracteres.\n   Mayúsculas, minúsculas, números.\n  Caracteres especiales (-!@#$%&amp;*ˆ+=_)</string>
 
-    //Password reset
+    <!-- Password reset -->
     <string name="pr_title">Resetea tu contraseña</string>
     <string name="pr_email_hint">Correo</string>
     <string name="pr_send">Enviar</string>
 
-    //Error
+    <!-- Error -->
     <string name="error_email_format">El correo no es correcto</string>
     <string name="error_email_no_register">El correo no esta registrado</string>
     <string name="error_contrasenia_debil">Contraseña debil</string>

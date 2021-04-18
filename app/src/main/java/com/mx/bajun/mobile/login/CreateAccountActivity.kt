@@ -96,6 +96,7 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
     }
 
     private fun init() {
+        setUpToolbar(true)
         auth = FirebaseAuth.getInstance()
         tvCcMensajeDeError = findViewById(R.id.tv_ccMensajeDeError)
         etCcNombre = findViewById(R.id.et_cc_nombre)

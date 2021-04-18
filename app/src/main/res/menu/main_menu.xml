@@ -7,5 +7,7 @@
             android:title="@string/menu_redesSociales"/>
         <item android:id="@+id/menu_configuracion"
             android:title="@string/menu_configuracion"/>
+        <item android:id="@+id/menu_exit"
+            android:title="@string/menu_exit"/>
     </group>
 </menu>

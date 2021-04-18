@@ -21,6 +21,10 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
         setUI()
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return true
@@ -40,12 +44,15 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
                 goToConfiguracion()
                 true
             }
+            R.id.menu_exit -> {
+                signOut(R.id.menu_exit)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     override fun onClick(p0: View?) {
-        signOut(p0?.id)
     }
 
     private fun setUI() {
@@ -55,8 +62,6 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
         val mEmail : String? = intent.getStringExtra(USER_EMAIL_INTENT_KEY)
         "$mDisplayName: $mEmail".also { tv_user.text = it }
 
-        val btnSignOut : Button = findViewById(R.id.btnSignOut)
-        btnSignOut.setOnClickListener(this)
     }
 
     private fun goToDiccionario() {Toast.makeText(this, "Diccionario", Toast.LENGTH_LONG).show()}

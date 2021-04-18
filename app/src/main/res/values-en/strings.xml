@@ -3,22 +3,25 @@
     <string name="app_name">Bajun</string>
     <string name="action_settings">Settings</string>
     <string name="logo_content_description">Bajun, your ideal business system</string>
+    <string name="ok">OK</string>
 
-    //Log in menu
+    <!-- menu -->
     <string name="menu_diccionario">Dictionary</string>
     <string name="menu_redesSociales">Social media</string>
     <string name="menu_configuracion">Settings</string>
-    <string name="menu_ingresaConCorreoTxt">Sign int with your e-mail</string>
+    <string name="menu_exit">Log out</string>
 
-    //Firebase Auth log in
+    <!-- Log in -->
+    <string name="li_ingresaConCorreoTxt">Sign int with your e-mail</string>
+
+    <!-- Firebase Auth log in -->
     <string name="fbAuth_correo">E-mail</string>
     <string name="fbAuth_password">Password</string>
     <string name="fbAuth_ingresar">Log in</string>
     <string name="fbAuth_crear_cuenta"><u>Create your account</u></string>
     <string name="fbAuth_forgot_password"><u>Forgot your password?</u></string>
-    <string name="ok">OK</string>
 
-    //Crea tu cuenta
+    <!-- Crea tu cuenta -->
     <string name="cc_crea_tu_cuenta">Create your account</string>
     <string name="cc_nombre">First Name</string>
     <string name="cc_apellido">Last Name: </string>
@@ -29,12 +32,12 @@
     <string name="cc_password_information_cd">Password requirements</string>
     <string name="cc_req_contrasena">The password should have at least:\n   6 to 15 characters.\n   Upper case, lower case, numbers.\n   Special characters (-!@#$%&amp;*ˆ+=_)</string>
 
-    //Password reset
+    <!-- Password reset -->
     <string name="pr_title">Password reset</string>
     <string name="pr_email_hint">E-mail</string>
     <string name="pr_send">Send</string>
 
-    //Error
+    <!-- Error -->
     <string name="error_email_format">The e-mail is incorrect</string>
     <string name="error_email_no_register">The email is not registered</string>
     <string name="error_contrasenia_debil">Weak password</string>

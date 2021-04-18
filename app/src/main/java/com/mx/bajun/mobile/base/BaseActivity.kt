@@ -13,6 +13,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.mx.bajun.mobile.R
+import com.mx.bajun.mobile.login.CreateAccountActivity
 import com.mx.bajun.mobile.utils.BajunSharedPreferences
 import com.mx.bajun.mobile.utils.Common.Companion.isDebugMode
 import com.mx.bajun.mobile.utils.Constants
@@ -70,26 +71,27 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     public fun setUpToolbar(bShowBackNavigationButton: Boolean) {
+        supportActionBar?.setDisplayShowTitleEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
         showBackNavigationButton(bShowBackNavigationButton)
+        supportActionBar?.setIcon(R.drawable.ic_baju_app)
     }
 
     private fun showBackNavigationButton(show: Boolean) {
         supportActionBar?.setDisplayHomeAsUpEnabled(show)
-        supportActionBar?.setDisplayShowHomeEnabled(show)
+        toolbar.setNavigationOnClickListener(View.OnClickListener { backPressButton() })
     }
 
     public fun changeTitle(title: String) {
-        val toolbar: Toolbar = findViewById(R.id.base_toolbar)
         toolbar.title = title
     }
 
     public fun changeSubTitle(subtTitle: String) {
-        val toolbar: Toolbar = findViewById(R.id.base_toolbar)
         toolbar.subtitle = subtTitle
     }
 
     public fun backPressButton() {
-        onBackPressed()
+        super.onBackPressed()
     }
 
     private fun googleSignOut() {
@@ -108,7 +110,7 @@ open class BaseActivity : AppCompatActivity() {
 
     public fun signOut(viewId: Int?) {
         when (viewId) {
-            R.id.btnSignOut -> {
+            R.id.menu_exit -> {
                 val signInType: String = BajunSharedPreferences.instance.getString(
                     this,
                     Constants.SIGN_IN_TYPE_KEY

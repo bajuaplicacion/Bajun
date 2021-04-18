@@ -142,6 +142,7 @@ class LoginHomeScreenActivity : BaseActivity(), View.OnClickListener {
 
     private fun goToFirebaseAuthLogin() {
         val firebaseAuthLoginIntent : Intent = Intent(this, FirebaseAuthLoginActivity::class.java)
+        firebaseAuthLoginIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivityForResult(firebaseAuthLoginIntent, EMAIL_LOGIN_RESULT_ID)
     }
 

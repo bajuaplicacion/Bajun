@@ -99,6 +99,7 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
 
     private fun goToCreaCuenta() {
         val crearCuentaIntent : Intent = Intent(this, CreateAccountActivity::class.java)
+        crearCuentaIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivityForResult(crearCuentaIntent, CREATE_ACCOUNT_RESULT_ID)
     }
 
