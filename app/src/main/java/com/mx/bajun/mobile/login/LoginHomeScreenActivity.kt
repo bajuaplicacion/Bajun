@@ -23,10 +23,12 @@ import com.mx.bajun.mobile.base.BaseActivity
 import com.mx.bajun.mobile.homescreen.HomeScreenActivity
 import com.mx.bajun.mobile.utils.BajunSharedPreferences
 import com.mx.bajun.mobile.utils.Constants
+import com.mx.bajun.mobile.utils.Constants.BACKPRESSED_ID
 import com.mx.bajun.mobile.utils.Constants.EMAIL_LOGIN_RESULT_ID
 import com.mx.bajun.mobile.utils.Constants.GOOGLE_LOGIN_REQ_ID
 import com.mx.bajun.mobile.utils.Constants.GOOGLE_SIGN_IN_TYPE
 import com.mx.bajun.mobile.utils.Constants.SIGN_IN_TYPE_KEY
+import com.mx.bajun.mobile.utils.Constants.SUCCESS_ID
 import com.mx.bajun.mobile.utils.Constants.USER_DISPLAY_NAME_KEY
 import com.mx.bajun.mobile.utils.Constants.USER_EMAIL_INTENT_KEY
 import com.mx.bajun.mobile.utils.Encrypt
@@ -69,7 +71,16 @@ class LoginHomeScreenActivity : BaseActivity(), View.OnClickListener {
                 }
             }
             EMAIL_LOGIN_RESULT_ID -> {
-                Log.d(TAG, "Email login")
+                when(resultCode) {
+                    BACKPRESSED_ID -> {}
+                    SUCCESS_ID -> {
+                        Log.d(TAG, "Email login")
+                        val auth : FirebaseAuth = Firebase.auth
+                        val currentUser = auth.currentUser
+                        goToHomeScreen(currentUser.displayName, currentUser.email)
+                    }
+
+                }
             }
         }
     }
@@ -142,7 +153,7 @@ class LoginHomeScreenActivity : BaseActivity(), View.OnClickListener {
 
     private fun goToFirebaseAuthLogin() {
         val firebaseAuthLoginIntent : Intent = Intent(this, FirebaseAuthLoginActivity::class.java)
-        firebaseAuthLoginIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        firebaseAuthLoginIntent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
         startActivityForResult(firebaseAuthLoginIntent, EMAIL_LOGIN_RESULT_ID)
     }
 

@@ -18,6 +18,7 @@ import com.mx.bajun.mobile.homescreen.HomeScreenActivity
 import com.mx.bajun.mobile.utils.BajunSharedPreferences
 import com.mx.bajun.mobile.utils.Common.Companion.isValidEmail
 import com.mx.bajun.mobile.utils.Constants
+import com.mx.bajun.mobile.utils.Constants.BACKPRESSED_ID
 import com.mx.bajun.mobile.utils.Constants.CREATE_ACCOUNT_RESULT_ID
 import com.mx.bajun.mobile.utils.Constants.DISPLAY_LANGUAGE_KEY
 import com.mx.bajun.mobile.utils.Constants.SUCCESS_ID
@@ -57,12 +58,19 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
             CREATE_ACCOUNT_RESULT_ID -> {
                 Log.d(TAG, "onActivityResult - create account")
                 when (resultCode) {
-                    SUCCESS_ID -> setResult(SUCCESS_ID)
-                    //FAILURE_ID -> setResult(FAILURE_ID)
+                    SUCCESS_ID -> {
+                        setResult(SUCCESS_ID)
+                        finish()
+                    }
+                    BACKPRESSED_ID -> {}
                 }
-                finish()
             }
         }
+    }
+
+    override fun backPressButton() {
+        setResult(BACKPRESSED_ID)
+        super.backPressButton()
     }
 
     private fun init() {
@@ -88,18 +96,18 @@ class FirebaseAuthLoginActivity : BaseActivity(), View.OnClickListener, View.OnF
             resetError(R.id.et_correo)
         }
     }
-
+/*
     private fun goToHomeScreen(displayName : String?, email : String?) {
         val homeScreenIntent : Intent = Intent(this, HomeScreenActivity::class.java).apply {
             putExtra(Constants.USER_DISPLAY_NAME_KEY, displayName)
             putExtra(Constants.USER_EMAIL_INTENT_KEY, email)
         }
         startActivity(homeScreenIntent)
-    }
+    }*/
 
     private fun goToCreaCuenta() {
         val crearCuentaIntent : Intent = Intent(this, CreateAccountActivity::class.java)
-        crearCuentaIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        crearCuentaIntent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
         startActivityForResult(crearCuentaIntent, CREATE_ACCOUNT_RESULT_ID)
     }
 

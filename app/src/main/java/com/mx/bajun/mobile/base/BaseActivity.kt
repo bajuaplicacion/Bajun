@@ -33,7 +33,6 @@ open class BaseActivity : AppCompatActivity() {
 
 
     override fun onBackPressed() {
-        Toast.makeText(this, "Back press", Toast.LENGTH_SHORT).show()
         super.onBackPressed()
     }
 
@@ -90,7 +89,7 @@ open class BaseActivity : AppCompatActivity() {
         toolbar.subtitle = subtTitle
     }
 
-    public fun backPressButton() {
+    open fun backPressButton() {
         super.onBackPressed()
     }
 
@@ -105,7 +104,7 @@ open class BaseActivity : AppCompatActivity() {
 
     private fun emailSignOut() {
         FirebaseAuth.getInstance().signOut()
-        finish()
+        backPressButton()
     }
 
     public fun signOut(viewId: Int?) {

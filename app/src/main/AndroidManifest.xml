@@ -22,10 +22,10 @@
         </activity>
         <activity
             android:name=".login.FirebaseAuthLoginActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".login.CreateAccountActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".homescreen.HomeScreenActivity"
             android:screenOrientation="portrait" />

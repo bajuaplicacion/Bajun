@@ -1,10 +1,6 @@
 package com.mx.bajun.mobile.login
 
-import android.annotation.SuppressLint
-import android.app.AlertDialog
-import android.app.Dialog
 import android.content.DialogInterface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -19,8 +15,8 @@ import com.google.firebase.auth.*
 import com.mx.bajun.mobile.R
 import com.mx.bajun.mobile.base.BaseActivity
 import com.mx.bajun.mobile.utils.BajunSharedPreferences
-import com.mx.bajun.mobile.utils.Common
 import com.mx.bajun.mobile.utils.Common.Companion.isValidEmail
+import com.mx.bajun.mobile.utils.Constants.BACKPRESSED_ID
 import com.mx.bajun.mobile.utils.Constants.EMAIL_SIGN_IN_TYPE
 import com.mx.bajun.mobile.utils.Constants.EMPTY_STRING
 import com.mx.bajun.mobile.utils.Constants.SIGN_IN_TYPE_KEY
@@ -93,6 +89,11 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
                 }
             }
         }
+    }
+
+    override fun backPressButton() {
+        setResult(BACKPRESSED_ID)
+        super.backPressButton()
     }
 
     private fun init() {
@@ -200,7 +201,6 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
             }
         }
     }
-
 
     private fun showPasswordDialog() {
         createDialog(false, getString(R.string.cc_rec_title), getString(R.string.cc_req_contrasena),
