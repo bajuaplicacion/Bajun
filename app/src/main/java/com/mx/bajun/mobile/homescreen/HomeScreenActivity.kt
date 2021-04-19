@@ -78,7 +78,7 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
 
         val gridLayoutManager : GridLayoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
         homeScreenOptions.layoutManager = gridLayoutManager
-        homeScreenOptions.addItemDecoration(OptionItemDecorator(10))
+        homeScreenOptions.addItemDecoration(OptionItemDecorator(resources.getDimension(R.dimen.mo_rv_cardvie_separator).toInt()))
         homeScreenOptions.adapter = menuAdapter
 
 

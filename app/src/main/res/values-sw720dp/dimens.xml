@@ -39,8 +39,8 @@
     <dimen name="dialog_button_separator">8dp</dimen>
 
     <!--Homescreen option-->
-    <dimen name="mo_cardview_dimen">300dp</dimen>
-    <dimen name="mo_image_dimen">150dp</dimen>
+    <dimen name="mo_cardview_dimen">195dp</dimen>
+    <dimen name="mo_rv_cardvie_separator">11dp</dimen>
     <dimen name="mo_cv_elevation">6dp</dimen>
 
     <!-- Pop up -->
