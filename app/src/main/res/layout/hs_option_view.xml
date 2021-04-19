@@ -28,7 +28,7 @@
                 android:contentDescription="@string/mo_information"
                 android:padding="@dimen/min_separator"
                 android:src="@drawable/ic_info_blue"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

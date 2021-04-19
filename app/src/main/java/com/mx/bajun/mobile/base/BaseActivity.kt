@@ -135,24 +135,6 @@ open class BaseActivity : AppCompatActivity() {
         return resources.getBoolean(R.bool.isTablet)
     }
 
-    fun createDialog(cancelable: Boolean, title: String, message: String, negativeText:String, negativeOnClickListener : DialogInterface.OnClickListener,
-                            positiveText:String?, positiveOnClickListener : DialogInterface.OnClickListener?) {
-        val builder : AlertDialog.Builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
-        builder.setIcon(R.drawable.ic_baju_app)
-        builder.setTitle(title)
-        builder.setMessage(message)
-        builder.setCancelable(cancelable)
-        builder.setNegativeButton(negativeText, negativeOnClickListener)
-        if (positiveOnClickListener != null && !positiveText.isNullOrEmpty()) {
-            builder.setPositiveButton(positiveText, positiveOnClickListener)
-        }
-        builder.create().show()
-    }
-
-    public fun createDialog(cancelable: Boolean, title: String, message: String, negativeText:String, negativeOnClickListener : DialogInterface.OnClickListener) {
-        createDialog(cancelable, title, message, negativeText, negativeOnClickListener, null, null)
-    }
-
     fun getDisplayLanguage() : String {
         return Locale.getDefault().language
     }

@@ -21,6 +21,7 @@ import com.mx.bajun.mobile.utils.Constants.EMAIL_SIGN_IN_TYPE
 import com.mx.bajun.mobile.utils.Constants.EMPTY_STRING
 import com.mx.bajun.mobile.utils.Constants.SIGN_IN_TYPE_KEY
 import com.mx.bajun.mobile.utils.Constants.SUCCESS_ID
+import com.mx.bajun.mobile.utils.Utils.Companion.createDialog
 
 class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocusChangeListener {
 
@@ -203,7 +204,7 @@ class CreateAccountActivity : BaseActivity(), View.OnClickListener, View.OnFocus
     }
 
     private fun showPasswordDialog() {
-        createDialog(false, getString(R.string.cc_rec_title), getString(R.string.cc_req_contrasena),
+        createDialog(this, false, getString(R.string.cc_rec_title), getString(R.string.cc_req_contrasena),
             getString(R.string.ok), DialogInterface.OnClickListener{ dialog, _ ->  dialog.dismiss() })
     }
 
