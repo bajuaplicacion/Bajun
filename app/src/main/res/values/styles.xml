@@ -37,6 +37,14 @@
         <item name="fontFamily">@font/poppins</item>
     </style>
 
+    <style name="MenuTextStyle">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/blueIconColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
     <style name="ErrorTextStyle">
         <item name="textAllCaps">false</item>
         <item name="android:textSize">14sp</item>

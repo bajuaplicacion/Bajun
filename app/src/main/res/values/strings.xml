@@ -36,6 +36,19 @@
     <string name="pr_email_hint">Correo</string>
     <string name="pr_send">Enviar</string>
 
+    <!-- Homescreen -->
+    <string name="hs_welcome">Bienvenido: </string>
+    <string name="hs_proveedores">Proveedores</string>
+    <string name="hs_clientes">Clientes</string>
+    <string name="hs_productos">Productos</string>
+    <string name="hs_promociones">Promociones</string>
+    <string name="hs_ordenes">Ordenes</string>
+    <string name="hs_ventas">Ventas</string>
+    <string name="hs_consultas">Consultas</string>
+    <string name="hs_reportes">Reportes</string>
+    <string name="hs_eMarketing">E-Marketing</string>
+    <string name="mo_information">Informacion</string>
+
     <!-- Error -->
     <string name="error_email_format">El correo no es correcto</string>
     <string name="error_email_no_register">El correo no esta registrado</string>

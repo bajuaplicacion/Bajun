@@ -9,6 +9,7 @@
     <dimen name="min_separator">5dp</dimen>
     <dimen name="cc_right_margin_separator">12dp</dimen>
     <dimen name="cc_top_margin_separator">2dp</dimen>
+    <dimen name="cv_image_separator">20dp</dimen>
 
     <!--Button -->
     <dimen name="google_sign_in_padding_button">10dp</dimen>
@@ -36,6 +37,11 @@
     <dimen name="dialog_title_padding">15dp</dimen>
     <dimen name="dialog_subTitle_padding">20dp</dimen>
     <dimen name="dialog_button_separator">6dp</dimen>
+
+    <!--Homescreen option-->
+    <dimen name="mo_cardview_dimen">200dp</dimen>
+    <dimen name="mo_image_dimen">100dp</dimen>
+    <dimen name="mo_cv_elevation">4dp</dimen>
 
     <!-- Pop up -->
     <dimen name="popUpLogoWidthHeight">100dp</dimen>

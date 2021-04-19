@@ -37,6 +37,19 @@
     <string name="pr_email_hint">E-mail</string>
     <string name="pr_send">Send</string>
 
+    <!-- Homescreen -->
+    <string name="hs_welcome">Welcome: </string>
+    <string name="hs_proveedores">Vendors</string>
+    <string name="hs_clientes">Clients</string>
+    <string name="hs_productos">Products</string>
+    <string name="hs_promociones">Promotions</string>
+    <string name="hs_ordenes">Orders</string>
+    <string name="hs_ventas">Sales</string>
+    <string name="hs_consultas">Queries</string>
+    <string name="hs_reportes">Reports</string>
+    <string name="hs_eMarketing">E-Marketing</string>
+    <string name="mo_information">Information</string>
+
     <!-- Error -->
     <string name="error_email_format">The e-mail is incorrect</string>
     <string name="error_email_no_register">The email is not registered</string>
