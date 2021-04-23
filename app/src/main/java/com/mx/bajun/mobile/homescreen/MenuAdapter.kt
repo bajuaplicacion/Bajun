@@ -1,15 +1,20 @@
 package com.mx.bajun.mobile.homescreen
 
 import android.content.Context
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.mx.bajun.mobile.R
 import com.mx.bajun.mobile.homescreen.model.MenuOptions
+import com.mx.bajun.mobile.utils.Common
+import com.mx.bajun.mobile.utils.Utils
 
 class MenuAdapter(private var context: Context, private var options: List<Int>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
     private var inflater : LayoutInflater = LayoutInflater.from(context)
@@ -23,47 +28,47 @@ class MenuAdapter(private var context: Context, private var options: List<Int>) 
         when (options[position]) {
             MenuOptions.PROVEEDORES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_proveedores)
-                holder.tag = MenuOptions.PROVEEDORES.titleId
+                holder.itemView.tag = MenuOptions.PROVEEDORES.titleId
                 holder.image.setImageResource(R.drawable.ic_contact_page_blue)
             }
             MenuOptions.CLIENTES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_clientes)
-                holder.tag = MenuOptions.CLIENTES.titleId
+                holder.itemView.tag = MenuOptions.CLIENTES.titleId
                 holder.image.setImageResource(R.drawable.ic_contact_page_blue)
             }
             MenuOptions.PRODUCTOS.titleId -> {
                 holder.title.text = context.getString(R.string.hs_productos)
-                holder.tag = MenuOptions.PRODUCTOS.titleId
+                holder.itemView.tag = MenuOptions.PRODUCTOS.titleId
                 holder.image.setImageResource(R.drawable.ic_backpack_blue)
             }
             MenuOptions.PROMOCIONES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_promociones)
-                holder.tag = MenuOptions.PROMOCIONES.titleId
+                holder.itemView.tag = MenuOptions.PROMOCIONES.titleId
                 holder.image.setImageResource(R.drawable.ic_backpack_blue)
             }
             MenuOptions.ORDENES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_ordenes)
-                holder.tag = MenuOptions.ORDENES.titleId
+                holder.itemView.tag = MenuOptions.ORDENES.titleId
                 holder.image.setImageResource(R.drawable.ic_backup_blue)
             }
             MenuOptions.VENTAS.titleId -> {
                 holder.title.text = context.getString(R.string.hs_ventas)
-                holder.tag = MenuOptions.VENTAS.titleId
+                holder.itemView.tag = MenuOptions.VENTAS.titleId
                 holder.image.setImageResource(R.drawable.ic_calculate_blue)
             }
             MenuOptions.CONSULTAS.titleId -> {
                 holder.title.text = context.getString(R.string.hs_consultas)
-                holder.tag = MenuOptions.CONSULTAS.titleId
+                holder.itemView.tag = MenuOptions.CONSULTAS.titleId
                 holder.image.setImageResource(R.drawable.ic_manage_search_blue)
             }
             MenuOptions.REPORETES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_reportes)
-                holder.tag = MenuOptions.REPORETES.titleId
+                holder.itemView.tag = MenuOptions.REPORETES.titleId
                 holder.image.setImageResource(R.drawable.ic_query_stats_blue)
             }
             MenuOptions.EMARKETIN.titleId -> {
                 holder.title.text = context.getString(R.string.hs_eMarketing)
-                holder.tag = MenuOptions.EMARKETIN.titleId
+                holder.itemView.tag = MenuOptions.EMARKETIN.titleId
                 holder.image.setImageResource(R.drawable.ic_wifi_tethering_blue)
             }
         }
@@ -73,14 +78,53 @@ class MenuAdapter(private var context: Context, private var options: List<Int>) 
         return options.size
     }
 
+
     class MenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val container : CardView = itemView.findViewById(R.id.cv_mo_container)
+        val information : ImageView = itemView.findViewById(R.id.iv_mo_information)
         val title : TextView = itemView.findViewById(R.id.iv_mo_title)
         val image : ImageView = itemView.findViewById(R.id.iv_mo_image)
-        var tag : Int = -1
-        init {
-            itemView.setOnClickListener(View.OnClickListener {
 
-            })
+        init {
+            information.setOnClickListener(setInformationOnClick())
+            container.setOnClickListener(setCardViewOnClick())
+        }
+
+        private fun setInformationOnClick() : View.OnClickListener {
+            return View.OnClickListener {
+                when (adapterPosition) {
+                    MenuOptions.PROVEEDORES.titleId -> dialog(it.context, it.context.getString(R.string.hs_proveedores), "Informacion del modulo de proveedores")
+                    MenuOptions.CLIENTES.titleId -> dialog(it.context, it.context.getString(R.string.hs_clientes), "Informacion del modulo de clientes")
+                    MenuOptions.PRODUCTOS.titleId -> dialog(it.context, it.context.getString(R.string.hs_productos), "Informacion del modulo de productos")
+                    MenuOptions.PROMOCIONES.titleId -> dialog(it.context, it.context.getString(R.string.hs_promociones), "Informacion del modulo de promociones")
+                    MenuOptions.ORDENES.titleId -> dialog(it.context, it.context.getString(R.string.hs_ordenes), "Informacion del modulo de ordenes")
+                    MenuOptions.VENTAS.titleId -> dialog(it.context, it.context.getString(R.string.hs_ventas), "Informacion del modulo de ventas")
+                    MenuOptions.CONSULTAS.titleId -> dialog(it.context, it.context.getString(R.string.hs_consultas), "Informacion del modulo de consultas")
+                    MenuOptions.REPORETES.titleId -> dialog(it.context, it.context.getString(R.string.hs_reportes), "Informacion del modulo de reportes")
+                    MenuOptions.EMARKETIN.titleId -> dialog(it.context, it.context.getString(R.string.hs_eMarketing), "Informacion del modulo de E-Marketing")
+                }
+            }
+        }
+
+        private fun setCardViewOnClick() : View.OnClickListener {
+            return View.OnClickListener {
+                when(adapterPosition) {
+                    MenuOptions.PROVEEDORES.titleId -> Common.goToVendors(it.context)
+                    MenuOptions.PRODUCTOS.titleId -> Common.goToProducts(it.context)
+                    MenuOptions.CLIENTES.titleId -> Common.goToClients(it.context)
+                    MenuOptions.PROMOCIONES.titleId -> Common.goToPromotions(it.context)
+                    MenuOptions.ORDENES.titleId -> Common.goToOrders(it.context)
+                    MenuOptions.VENTAS.titleId -> Common.goToSales(it.context)
+                    MenuOptions.CONSULTAS.titleId -> Common.goToQueries(it.context)
+                    MenuOptions.REPORETES.titleId -> Common.goToReports(it.context)
+                    MenuOptions.EMARKETIN.titleId -> Common.goToEMarketing(it.context)
+                }
+            }
+        }
+
+        private fun dialog(context: Context, title:String, message:String) {
+            Utils.Companion.createDialog(context, true, title,message, context.getString(R.string.ok),
+                DialogInterface.OnClickListener{ dialog, _ ->  dialog.dismiss() })
         }
     }
 
