@@ -14,6 +14,7 @@ import com.mx.bajun.mobile.R
 import com.mx.bajun.mobile.base.BaseActivity
 import com.mx.bajun.mobile.homescreen.model.MenuOptions
 import com.mx.bajun.mobile.homescreen.model.OptionItemDecorator
+import com.mx.bajun.mobile.utils.Common
 import com.mx.bajun.mobile.utils.Constants.USER_DISPLAY_NAME_KEY
 import com.mx.bajun.mobile.utils.Constants.USER_EMAIL_INTENT_KEY
 
@@ -43,15 +44,15 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu_diccionario ->  {
-                goToDiccionario()
+                Common.goToDictionary(this)
                 true
             }
             R.id.menu_redesSociales -> {
-                goToRedesSociales()
+                Common.goToSocialMedia(this)
                 true
             }
             R.id.menu_configuracion -> {
-                goToConfiguracion()
+                Common.goToSettings(this)
                 true
             }
             R.id.menu_exit -> {
@@ -83,11 +84,5 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
 
 
     }
-
-    private fun goToDiccionario() {Toast.makeText(this, "Diccionario", Toast.LENGTH_LONG).show()}
-
-    private fun goToRedesSociales() {Toast.makeText(this, "Redes sociales", Toast.LENGTH_LONG).show()}
-
-    private fun goToConfiguracion() {Toast.makeText(this, "Configuracion", Toast.LENGTH_LONG).show()}
 
 }

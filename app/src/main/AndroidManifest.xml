@@ -9,8 +9,21 @@
         android:roundIcon="@drawable/ic_baju_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login.PasswordResetPopUpActivity"
-            android:theme="@style/popUpTheme"/>
+        <activity android:name=".reports.ReportsActivity"></activity>
+        <activity android:name=".ventas.SalesActivity" />
+        <activity android:name=".ordenes.OrdersActivity" />
+        <activity android:name=".emarketing.EMarketingActivity" />
+        <activity android:name=".consultas.QueriesActivity" />
+        <activity android:name=".promociones.PromotionsActivity" />
+        <activity android:name=".productos.ProductsActivity" />
+        <activity android:name=".clientes.ClientsActivity" />
+        <activity android:name=".proveedores.VendorsActivity" />
+        <activity android:name=".menu.redesSociales.SocialMediaActivity" />
+        <activity android:name=".menu.configuracion.SettingsActivity" />
+        <activity android:name=".menu.diccionario.DictionaryActivity" />
+        <activity
+            android:name=".login.PasswordResetPopUpActivity"
+            android:theme="@style/popUpTheme" />
         <activity
             android:name=".login.LoginHomeScreenActivity"
             android:screenOrientation="portrait">
@@ -22,10 +35,10 @@
         </activity>
         <activity
             android:name=".login.FirebaseAuthLoginActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".login.CreateAccountActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".homescreen.HomeScreenActivity"
             android:screenOrientation="portrait" />

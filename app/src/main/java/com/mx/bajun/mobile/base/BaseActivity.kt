@@ -82,11 +82,13 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     public fun changeTitle(title: String) {
-        toolbar.title = title
+        //toolbar.title = getString(R.string.app_name) + " - " + title
+        supportActionBar?.title = getString(R.string.app_name) + " - " + title
     }
 
     public fun changeSubTitle(subtTitle: String) {
-        toolbar.subtitle = subtTitle
+        //toolbar.subtitle = subtTitle
+        supportActionBar?.subtitle = subtTitle
     }
 
     open fun backPressButton() {
