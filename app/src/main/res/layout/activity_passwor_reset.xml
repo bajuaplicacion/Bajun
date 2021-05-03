@@ -69,7 +69,7 @@
             android:id="@+id/et_pr_correo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawableStart="@drawable/ic_mail"
+            android:drawableStart="@drawable/ic_mail_blue"
             android:drawablePadding="@dimen/editText_drawable_padding"
             android:hint="@string/pr_email_hint"
             android:inputType="textEmailAddress"
