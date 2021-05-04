@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:id="@+id/menu_main_menu">
-        <item android:id="@+id/menu_diccionario"
-
-            android:title="@string/menu_diccionario"/>
-        <item android:id="@+id/menu_redesSociales"
-            android:title="@string/menu_redesSociales"/>
-        <item android:id="@+id/menu_configuracion"
-            android:title="@string/menu_configuracion"/>
-        <item android:id="@+id/menu_exit"
-            android:title="@string/menu_exit"/>
+        <item
+            android:icon="@drawable/ic_menu_white"
+            app:showAsAction="always"
+            android:title="">
+            <menu>
+                <item android:id="@+id/menu_diccionario"
+                    android:icon="@drawable/ic_book_white"
+                    android:title="@string/menu_diccionario"/>
+                <item android:id="@+id/menu_redesSociales"
+                    android:icon="@drawable/ic_social_media_white"
+                    android:title="@string/menu_redesSociales"/>
+                <item android:id="@+id/menu_configuracion"
+                    android:icon="@drawable/ic_settings_white"
+                    android:title="@string/menu_configuracion"/>
+                <item android:id="@+id/menu_exit"
+                    android:icon="@drawable/ic_logout_white"
+                    android:title="@string/menu_exit"/>
+            </menu>
+        </item>
     </group>
 </menu>
