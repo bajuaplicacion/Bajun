@@ -7,9 +7,16 @@
             app:showAsAction="always"
             android:title="">
             <menu>
-                <item android:id="@+id/menu_diccionario"
+                <item android:id="@+id/menu_main_diccionario"
                     android:icon="@drawable/ic_book_white"
-                    android:title="@string/menu_diccionario"/>
+                    android:title="@string/menu_diccionario">
+                    <menu>
+                        <item android:id="@+id/menu_diccionario"
+                            android:title="@string/menu_units"/>
+                        <item android:id="@+id/menu_conversiones"
+                            android:title="@string/menu_conversions"/>
+                    </menu>
+                </item>
                 <item android:id="@+id/menu_redesSociales"
                     android:icon="@drawable/ic_social_media_white"
                     android:title="@string/menu_redesSociales"/>

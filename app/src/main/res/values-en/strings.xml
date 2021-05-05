@@ -7,6 +7,8 @@
 
     <!-- menu -->
     <string name="menu_diccionario">Dictionary</string>
+    <string name="menu_units">Units</string>
+    <string name="menu_conversions">Conversions</string>
     <string name="menu_redesSociales">Social media</string>
     <string name="menu_configuracion">Settings</string>
     <string name="menu_exit">Log out</string>
