@@ -1,14 +1,12 @@
-package com.mx.bajun.mobile.homescreen
+package com.mx.bajun.mobile.utils.recyclerview.adapters
 
 import android.content.Context
 import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.mx.bajun.mobile.R
@@ -16,15 +14,15 @@ import com.mx.bajun.mobile.homescreen.model.MenuOptions
 import com.mx.bajun.mobile.utils.Common
 import com.mx.bajun.mobile.utils.Utils
 
-class MenuAdapter(private var context: Context, private var options: List<Int>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+class HomeScreenAdapter(private var context: Context, private var options: List<Int>) : RecyclerView.Adapter<HomeScreenAdapter.HomeScreenViewHolder>() {
     private var inflater : LayoutInflater = LayoutInflater.from(context)
     
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeScreenViewHolder {
         val view: View = inflater.inflate(R.layout.hs_option_view, parent, false)
-        return MenuViewHolder(view)
+        return HomeScreenViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HomeScreenViewHolder, position: Int) {
         when (options[position]) {
             MenuOptions.PROVEEDORES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_proveedores)
@@ -79,7 +77,7 @@ class MenuAdapter(private var context: Context, private var options: List<Int>) 
     }
 
 
-    class MenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class HomeScreenViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val container : CardView = itemView.findViewById(R.id.cv_mo_container)
         val information : ImageView = itemView.findViewById(R.id.iv_mo_information)
         val title : TextView = itemView.findViewById(R.id.iv_mo_title)

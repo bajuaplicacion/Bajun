@@ -1,10 +1,10 @@
-package com.mx.bajun.mobile.homescreen.model
+package com.mx.bajun.mobile.utils.recyclerview.itemdecorator
 
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class OptionItemDecorator (val space: Int = 5) : RecyclerView.ItemDecoration() {
+class HomeScreenOptionItemDecorator (val space: Int = 5) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         //super.getItemOffsets(outRect, view, parent, state)

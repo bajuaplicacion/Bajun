@@ -1,22 +1,19 @@
 package com.mx.bajun.mobile.homescreen
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mx.bajun.mobile.R
 import com.mx.bajun.mobile.base.BaseActivity
 import com.mx.bajun.mobile.homescreen.model.MenuOptions
-import com.mx.bajun.mobile.homescreen.model.OptionItemDecorator
+import com.mx.bajun.mobile.utils.recyclerview.itemdecorator.HomeScreenOptionItemDecorator
 import com.mx.bajun.mobile.utils.Common
 import com.mx.bajun.mobile.utils.Constants.USER_DISPLAY_NAME_KEY
-import com.mx.bajun.mobile.utils.Constants.USER_EMAIL_INTENT_KEY
+import com.mx.bajun.mobile.utils.recyclerview.adapters.HomeScreenAdapter
 
 
 class HomeScreenActivity : BaseActivity(), View.OnClickListener {
@@ -24,7 +21,7 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
     private lateinit var homeScreenOptions : RecyclerView
     private lateinit var tv_user : TextView
     private lateinit var options : List<Int>
-    private lateinit var menuAdapter: MenuAdapter
+    private lateinit var homeScreenAdapter: HomeScreenAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homescreen)
@@ -79,12 +76,12 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
         options = listOf(MenuOptions.PROVEEDORES.titleId, MenuOptions.CLIENTES.titleId, MenuOptions.PRODUCTOS.titleId,
             MenuOptions.PROMOCIONES.titleId, MenuOptions.ORDENES.titleId, MenuOptions.VENTAS.titleId, MenuOptions.CONSULTAS.titleId,
             MenuOptions.REPORETES.titleId, MenuOptions.EMARKETIN.titleId)
-        menuAdapter = MenuAdapter(this, options)
+        homeScreenAdapter = HomeScreenAdapter(this, options)
 
         val gridLayoutManager : GridLayoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
         homeScreenOptions.layoutManager = gridLayoutManager
-        homeScreenOptions.addItemDecoration(OptionItemDecorator(resources.getDimension(R.dimen.mo_rv_cardvie_separator).toInt()))
-        homeScreenOptions.adapter = menuAdapter
+        homeScreenOptions.addItemDecoration(HomeScreenOptionItemDecorator(resources.getDimension(R.dimen.mo_rv_cardvie_separator).toInt()))
+        homeScreenOptions.adapter = homeScreenAdapter
 
 
     }
