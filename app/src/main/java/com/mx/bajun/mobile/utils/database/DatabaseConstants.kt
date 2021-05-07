@@ -1,4 +1,4 @@
-package com.mx.bajun.mobile.utils
+package com.mx.bajun.mobile.utils.database
 
 object DatabaseConstants {
 

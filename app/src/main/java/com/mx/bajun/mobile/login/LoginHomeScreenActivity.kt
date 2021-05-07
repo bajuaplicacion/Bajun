@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.view.setPadding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -31,8 +29,7 @@ import com.mx.bajun.mobile.utils.Constants.SIGN_IN_TYPE_KEY
 import com.mx.bajun.mobile.utils.Constants.SUCCESS_ID
 import com.mx.bajun.mobile.utils.Constants.USER_DISPLAY_NAME_KEY
 import com.mx.bajun.mobile.utils.Constants.USER_EMAIL_INTENT_KEY
-import com.mx.bajun.mobile.utils.Encrypt
-import org.w3c.dom.Text
+import com.mx.bajun.mobile.utils.encryption.Encrypt
 
 class LoginHomeScreenActivity : BaseActivity(), View.OnClickListener {
 

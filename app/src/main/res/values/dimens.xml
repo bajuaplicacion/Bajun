@@ -43,6 +43,11 @@
     <dimen name="mo_rv_cardvie_separator">7dp</dimen>
     <dimen name="mo_cv_elevation">4dp</dimen>
 
+    <!--Recycler view options-->
+    <dimen name="rv_iv_option">100dp</dimen>
+    <dimen name="rv_margin">12dp</dimen>
+    <dimen name="rv_layout_margin">30dp</dimen>
+
     <!-- Pop up -->
     <dimen name="popUpLogoWidthHeight">100dp</dimen>
     <!-- Image -->

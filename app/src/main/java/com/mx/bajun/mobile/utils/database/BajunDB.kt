@@ -1,15 +1,15 @@
-package com.mx.bajun.mobile.utils
+package com.mx.bajun.mobile.utils.database
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.mx.bajun.mobile.utils.DatabaseConstants.DATABASE_DROP_TABLE
-import com.mx.bajun.mobile.utils.DatabaseConstants.DATABASE_NAME
-import com.mx.bajun.mobile.utils.DatabaseConstants.DATABASE_VERSION
-import com.mx.bajun.mobile.utils.DatabaseConstants.DB_CONVERSION_TABLE
-import com.mx.bajun.mobile.utils.DatabaseConstants.DB_CREATE_CONVERSION_TABLE
-import com.mx.bajun.mobile.utils.DatabaseConstants.DB_CREATE_DICTIONARY_TABLE
-import com.mx.bajun.mobile.utils.DatabaseConstants.DB_DICTIONARY_TABLE
+import com.mx.bajun.mobile.utils.database.DatabaseConstants.DATABASE_DROP_TABLE
+import com.mx.bajun.mobile.utils.database.DatabaseConstants.DATABASE_NAME
+import com.mx.bajun.mobile.utils.database.DatabaseConstants.DATABASE_VERSION
+import com.mx.bajun.mobile.utils.database.DatabaseConstants.DB_CONVERSION_TABLE
+import com.mx.bajun.mobile.utils.database.DatabaseConstants.DB_CREATE_CONVERSION_TABLE
+import com.mx.bajun.mobile.utils.database.DatabaseConstants.DB_CREATE_DICTIONARY_TABLE
+import com.mx.bajun.mobile.utils.database.DatabaseConstants.DB_DICTIONARY_TABLE
 
 class BajunDB (context: Context, name: String = DATABASE_NAME, factory: SQLiteDatabase.CursorFactory? = null, version: Int = DATABASE_VERSION) : SQLiteOpenHelper(context, name, factory, version) {
 

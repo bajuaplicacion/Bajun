@@ -14,7 +14,7 @@ import com.mx.bajun.mobile.homescreen.model.MenuOptions
 import com.mx.bajun.mobile.utils.Common
 import com.mx.bajun.mobile.utils.Utils
 
-class HomeScreenAdapter(private var context: Context, private var options: List<Int>) : RecyclerView.Adapter<HomeScreenAdapter.HomeScreenViewHolder>() {
+class HomeScreenAdapter(private val context: Context, private val options: List<Int>) : RecyclerView.Adapter<HomeScreenAdapter.HomeScreenViewHolder>() {
     private var inflater : LayoutInflater = LayoutInflater.from(context)
     
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeScreenViewHolder {
@@ -23,53 +23,7 @@ class HomeScreenAdapter(private var context: Context, private var options: List<
     }
 
     override fun onBindViewHolder(holder: HomeScreenViewHolder, position: Int) {
-        when (options[position]) {
-            MenuOptions.PROVEEDORES.titleId -> {
-                holder.title.text = context.getString(R.string.hs_proveedores)
-                holder.itemView.tag = MenuOptions.PROVEEDORES.titleId
-                holder.image.setImageResource(R.drawable.ic_proveedores_blue)
-            }
-            MenuOptions.CLIENTES.titleId -> {
-                holder.title.text = context.getString(R.string.hs_clientes)
-                holder.itemView.tag = MenuOptions.CLIENTES.titleId
-                holder.image.setImageResource(R.drawable.ic_clientes_blue)
-            }
-            MenuOptions.PRODUCTOS.titleId -> {
-                holder.title.text = context.getString(R.string.hs_productos)
-                holder.itemView.tag = MenuOptions.PRODUCTOS.titleId
-                holder.image.setImageResource(R.drawable.ic_productos_blue)
-            }
-            MenuOptions.PROMOCIONES.titleId -> {
-                holder.title.text = context.getString(R.string.hs_promociones)
-                holder.itemView.tag = MenuOptions.PROMOCIONES.titleId
-                holder.image.setImageResource(R.drawable.ic_promociones_blue)
-            }
-            MenuOptions.ORDENES.titleId -> {
-                holder.title.text = context.getString(R.string.hs_ordenes)
-                holder.itemView.tag = MenuOptions.ORDENES.titleId
-                holder.image.setImageResource(R.drawable.ic_ordenes_blue)
-            }
-            MenuOptions.VENTAS.titleId -> {
-                holder.title.text = context.getString(R.string.hs_ventas)
-                holder.itemView.tag = MenuOptions.VENTAS.titleId
-                holder.image.setImageResource(R.drawable.ic_ventas_blue)
-            }
-            MenuOptions.CONSULTAS.titleId -> {
-                holder.title.text = context.getString(R.string.hs_consultas)
-                holder.itemView.tag = MenuOptions.CONSULTAS.titleId
-                holder.image.setImageResource(R.drawable.ic_busquedas_blue)
-            }
-            MenuOptions.REPORETES.titleId -> {
-                holder.title.text = context.getString(R.string.hs_reportes)
-                holder.itemView.tag = MenuOptions.REPORETES.titleId
-                holder.image.setImageResource(R.drawable.ic_reportes_blue)
-            }
-            MenuOptions.EMARKETIN.titleId -> {
-                holder.title.text = context.getString(R.string.hs_eMarketing)
-                holder.itemView.tag = MenuOptions.EMARKETIN.titleId
-                holder.image.setImageResource(R.drawable.ic_emarketing_blue)
-            }
-        }
+        holder.setUI()
     }
 
     override fun getItemCount(): Int {
@@ -78,14 +32,64 @@ class HomeScreenAdapter(private var context: Context, private var options: List<
 
 
     class HomeScreenViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val container : CardView = itemView.findViewById(R.id.cv_mo_container)
-        val information : ImageView = itemView.findViewById(R.id.iv_mo_information)
-        val title : TextView = itemView.findViewById(R.id.iv_mo_title)
-        val image : ImageView = itemView.findViewById(R.id.iv_mo_image)
+        private val container : CardView = itemView.findViewById(R.id.cv_mo_container)
+        private val information : ImageView = itemView.findViewById(R.id.iv_mo_information)
+        private val title : TextView = itemView.findViewById(R.id.iv_mo_title)
+        private val image : ImageView = itemView.findViewById(R.id.iv_mo_image)
 
         init {
             information.setOnClickListener(setInformationOnClick())
             container.setOnClickListener(setCardViewOnClick())
+        }
+
+        fun setUI() {
+            when (adapterPosition) {
+                MenuOptions.PROVEEDORES.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_proveedores)
+                    itemView.tag = MenuOptions.PROVEEDORES.titleId
+                    image.setImageResource(R.drawable.ic_proveedores_blue)
+                }
+                MenuOptions.CLIENTES.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_clientes)
+                    itemView.tag = MenuOptions.CLIENTES.titleId
+                    image.setImageResource(R.drawable.ic_clientes_blue)
+                }
+                MenuOptions.PRODUCTOS.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_productos)
+                    itemView.tag = MenuOptions.PRODUCTOS.titleId
+                    image.setImageResource(R.drawable.ic_productos_blue)
+                }
+                MenuOptions.PROMOCIONES.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_promociones)
+                    itemView.tag = MenuOptions.PROMOCIONES.titleId
+                    image.setImageResource(R.drawable.ic_promociones_blue)
+                }
+                MenuOptions.ORDENES.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_ordenes)
+                    itemView.tag = MenuOptions.ORDENES.titleId
+                    image.setImageResource(R.drawable.ic_ordenes_blue)
+                }
+                MenuOptions.VENTAS.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_ventas)
+                    itemView.tag = MenuOptions.VENTAS.titleId
+                    image.setImageResource(R.drawable.ic_ventas_blue)
+                }
+                MenuOptions.CONSULTAS.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_consultas)
+                    itemView.tag = MenuOptions.CONSULTAS.titleId
+                    image.setImageResource(R.drawable.ic_busquedas_blue)
+                }
+                MenuOptions.REPORETES.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_reportes)
+                    itemView.tag = MenuOptions.REPORETES.titleId
+                    image.setImageResource(R.drawable.ic_reportes_blue)
+                }
+                MenuOptions.EMARKETIN.titleId -> {
+                    title.text = itemView.context.getString(R.string.hs_eMarketing)
+                    itemView.tag = MenuOptions.EMARKETIN.titleId
+                    image.setImageResource(R.drawable.ic_emarketing_blue)
+                }
+            }
         }
 
         private fun setInformationOnClick() : View.OnClickListener {

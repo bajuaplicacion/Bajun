@@ -1,4 +1,4 @@
-package com.mx.bajun.mobile.utils;
+package com.mx.bajun.mobile.utils.encryption;
 
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;

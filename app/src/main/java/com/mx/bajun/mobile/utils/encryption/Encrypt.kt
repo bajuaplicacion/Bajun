@@ -1,20 +1,12 @@
-package com.mx.bajun.mobile.utils
+package com.mx.bajun.mobile.utils.encryption
 
-import android.os.Build
-import android.security.keystore.KeyGenParameterSpec
-import android.security.keystore.KeyProperties
-import android.security.keystore.KeyProperties.*
-import android.text.TextUtils
-import androidx.annotation.RequiresApi
 import com.mx.bajun.mobile.utils.Constants.EMPTY_STRING
-import java.lang.Exception
-import javax.crypto.KeyGenerator
 
 class Encrypt private constructor(){
     companion object {
         private const val BAJUN_ALIAS = "BajunSecureKey"
         private var keyStore : EncryptCore? = null
-        private var INSTANCE : Encrypt ? = null
+        private var INSTANCE : Encrypt? = null
         val instance : Encrypt
             get() {
                if (INSTANCE == null) {
