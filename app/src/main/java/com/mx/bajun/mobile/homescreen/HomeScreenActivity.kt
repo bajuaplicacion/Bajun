@@ -47,6 +47,10 @@ class HomeScreenActivity : BaseActivity(), View.OnClickListener {
                 Common.goToDictionary(this)
                 true
             }
+            R.id.menu_conversiones -> {
+                Common.goToConversions(this)
+                true
+            }
             R.id.menu_redesSociales -> {
                 Common.goToSocialMedia(this)
                 true

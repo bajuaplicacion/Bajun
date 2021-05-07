@@ -10,6 +10,7 @@ import com.mx.bajun.mobile.clientes.ClientsActivity
 import com.mx.bajun.mobile.consultas.QueriesActivity
 import com.mx.bajun.mobile.emarketing.EMarketingActivity
 import com.mx.bajun.mobile.menu.configuracion.SettingsActivity
+import com.mx.bajun.mobile.menu.diccionario.ConversionActivity
 import com.mx.bajun.mobile.menu.diccionario.DictionaryActivity
 import com.mx.bajun.mobile.menu.redesSociales.SocialMediaActivity
 import com.mx.bajun.mobile.ordenes.OrdersActivity
@@ -31,6 +32,10 @@ class Common {
 
         fun goToDictionary(context: Context) {
             context.startActivity( Intent(context, DictionaryActivity::class.java) )
+        }
+
+        fun goToConversions(context: Context) {
+            context.startActivity( Intent(context, ConversionActivity::class.java))
         }
 
         fun goToSocialMedia(context: Context) {

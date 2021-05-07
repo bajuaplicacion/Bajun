@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/ic_baju_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".reports.ReportsActivity"></activity>
+        <activity android:name=".menu.diccionario.ConversionActivity"></activity>
+        <activity android:name=".reports.ReportsActivity" />
         <activity android:name=".ventas.SalesActivity" />
         <activity android:name=".ordenes.OrdersActivity" />
         <activity android:name=".emarketing.EMarketingActivity" />

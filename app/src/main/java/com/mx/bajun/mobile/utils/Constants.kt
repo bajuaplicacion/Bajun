@@ -9,7 +9,6 @@ object Constants {
     const val EMAIL_LOGIN_RESULT_ID : Int = 1001
     const val CREATE_ACCOUNT_RESULT_ID : Int = 1002
 
-
     //Keys
     const val USER_DISPLAY_NAME_KEY : String = "userDisplayNameTag"
     const val USER_EMAIL_INTENT_KEY : String = "userEmailTag"

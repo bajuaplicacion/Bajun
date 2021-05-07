@@ -29,47 +29,47 @@ class MenuAdapter(private var context: Context, private var options: List<Int>) 
             MenuOptions.PROVEEDORES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_proveedores)
                 holder.itemView.tag = MenuOptions.PROVEEDORES.titleId
-                holder.image.setImageResource(R.drawable.ic_contact_page_blue)
+                holder.image.setImageResource(R.drawable.ic_proveedores_blue)
             }
             MenuOptions.CLIENTES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_clientes)
                 holder.itemView.tag = MenuOptions.CLIENTES.titleId
-                holder.image.setImageResource(R.drawable.ic_contact_page_blue)
+                holder.image.setImageResource(R.drawable.ic_clientes_blue)
             }
             MenuOptions.PRODUCTOS.titleId -> {
                 holder.title.text = context.getString(R.string.hs_productos)
                 holder.itemView.tag = MenuOptions.PRODUCTOS.titleId
-                holder.image.setImageResource(R.drawable.ic_backpack_blue)
+                holder.image.setImageResource(R.drawable.ic_productos_blue)
             }
             MenuOptions.PROMOCIONES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_promociones)
                 holder.itemView.tag = MenuOptions.PROMOCIONES.titleId
-                holder.image.setImageResource(R.drawable.ic_backpack_blue)
+                holder.image.setImageResource(R.drawable.ic_promociones_blue)
             }
             MenuOptions.ORDENES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_ordenes)
                 holder.itemView.tag = MenuOptions.ORDENES.titleId
-                holder.image.setImageResource(R.drawable.ic_backup_blue)
+                holder.image.setImageResource(R.drawable.ic_ordenes_blue)
             }
             MenuOptions.VENTAS.titleId -> {
                 holder.title.text = context.getString(R.string.hs_ventas)
                 holder.itemView.tag = MenuOptions.VENTAS.titleId
-                holder.image.setImageResource(R.drawable.ic_calculate_blue)
+                holder.image.setImageResource(R.drawable.ic_ventas_blue)
             }
             MenuOptions.CONSULTAS.titleId -> {
                 holder.title.text = context.getString(R.string.hs_consultas)
                 holder.itemView.tag = MenuOptions.CONSULTAS.titleId
-                holder.image.setImageResource(R.drawable.ic_manage_search_blue)
+                holder.image.setImageResource(R.drawable.ic_busquedas_blue)
             }
             MenuOptions.REPORETES.titleId -> {
                 holder.title.text = context.getString(R.string.hs_reportes)
                 holder.itemView.tag = MenuOptions.REPORETES.titleId
-                holder.image.setImageResource(R.drawable.ic_query_stats_blue)
+                holder.image.setImageResource(R.drawable.ic_reportes_blue)
             }
             MenuOptions.EMARKETIN.titleId -> {
                 holder.title.text = context.getString(R.string.hs_eMarketing)
                 holder.itemView.tag = MenuOptions.EMARKETIN.titleId
-                holder.image.setImageResource(R.drawable.ic_wifi_tethering_blue)
+                holder.image.setImageResource(R.drawable.ic_emarketing_blue)
             }
         }
     }
